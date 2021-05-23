@@ -80,9 +80,23 @@ public class EjercicioTres {
     }
     
     //Punto E
-    //public int[] interseccion(){
-        
-    //}
+    public int[] interseccion(int[] b, int i, int j, int[]inter){
+        if(i==b.length)
+            return inter;
+        if(esta(b[i], 0)){
+            inter[j]=b[i];
+            j++;
+        }
+        return interseccion(b, ++i, j, inter);
+    }
+
+    public boolean esta(int num, int i){
+        if(i==array.length)
+            return false;
+        if(num==array[i])
+            return true;
+        return esta(num, ++i);
+    }
     
     //Punto F
     public int[] union(int[] b){
@@ -138,6 +152,7 @@ public class EjercicioTres {
         System.out.println("");
         
         System.out.println("Punto E:");
+        System.out.println("Interseccion entre A y B:");
         System.out.println("");
         
         System.out.println("Punto F:");

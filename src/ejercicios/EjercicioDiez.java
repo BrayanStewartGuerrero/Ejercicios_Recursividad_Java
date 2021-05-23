@@ -30,7 +30,7 @@ public class EjercicioDiez{
         public static void main(String[] args) {
         EjercicioDiez d = new EjercicioDiez();
         ArrayList<Integer> numeros = new ArrayList<>();
-        int numero = 10;
+        int numero = 4;
         int suma = 0;
         d.combinacionesSuma(numero, numeros, suma);
     }
